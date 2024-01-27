@@ -82,23 +82,25 @@ while run == True:
     
     while True:
         choose = input("(1-5): ")
-        if choose.isdigit() or 'end':
-            break
-        else:
+        if not choose.isdigit():
             print("     Wrong Input. Please enter a number.")
+        elif choose.isdigit() or 'end':
+            break
     
     if choose == 'end':
         run = False
         break
         
     if int(choose) > 5 or int(choose) < 1:
+        print("     Please enter a number between 1 and 5.")
         while True:
-            print("     Please enter a number between 1 and 5.")
             choose = input("(1-5): ")
-            if int(choose) >= 1 and int(choose) <= 5:
-                break
             if not choose.isdigit():
                 print("     Wrong Input. Please enter a number.")
+            elif int(choose) > 5 or int(choose) < 1:
+                print("     Please enter a number between 1 and 5.")
+            elif int(choose) >= 1 and int(choose) <= 5:
+                break
             
     
     if choose == '1':
