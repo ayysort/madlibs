@@ -79,28 +79,27 @@ while run == True:
     print('5. ')
     print(' ')
     print("type 'end' to leave.")
-    choose = input("(1-10): ")
+    
+    while True:
+        choose = input("(1-5): ")
+        if choose.isdigit() or 'end':
+            break
+        else:
+            print("     Wrong Input. Please enter a number.")
     
     if choose == 'end':
         run = False
         break
-    
-    if not choose.isdigit():
-        nonum = True
-        while nonum == True:
-            print("     Wrong Input. Please enter a number.")
-            choose = input("(1-10): ")
-            if choose.isdigit():
-                break
-            else:
-                continue
         
-    if int(choose) > 10 or int(choose) < 1:
+    if int(choose) > 5 or int(choose) < 1:
         while True:
-            print("     Please enter a number between 1 and 10.")
-            choose = input("(1-10): ")
-            if int(choose) >= 1 and int(choose) <= 10:
+            print("     Please enter a number between 1 and 5.")
+            choose = input("(1-5): ")
+            if int(choose) >= 1 and int(choose) <= 5:
                 break
+            if not choose.isdigit():
+                print("     Wrong Input. Please enter a number.")
+            
     
     if choose == '1':
         mad1()
@@ -112,5 +111,3 @@ while run == True:
         mad4()
     if choose == '5':
         mad5()
-
-    
