@@ -2,8 +2,7 @@
 print(' ')
 print(' ')
 print('Welcome to Madlibs!')
-print(' ')
-print(' ')
+
 
 # Madlib Bank
 
@@ -42,7 +41,6 @@ def mad1():
 
 def mad2():
     while True:
-        # Input
         liquid2_1 = input("type a liquid: ")
         adj2_1 = input("type an adjective: ")
         num2_1 = input("type a number: ")
@@ -61,7 +59,6 @@ def mad2():
         place2_1 = input("type a place: ")
         verb2_2 = input("type a verb: ")
         
-        # Output
         print(' ')
         print(f"When you show up for a rooftop party, the {liquid2_1} you choose to")
         print(f"drink is very important. After all, the weather is usually {adj2_1}, the")
@@ -77,7 +74,6 @@ def mad2():
         print(f"to (the) {place2_1} than usual - {noun2_2.capitalize()} Light makes you {verb2_2} all night long!")
         print(' ')
         
-        # Play again?
         while True:
             again2 = input('Would you like to do this Madlib again? (y/n): ')
             if again2 == 'n':
@@ -182,6 +178,7 @@ def mad4():
         print(f"So they will ask for a {noun4_1}. And chances are if you give them a {noun4_1}, they are going to want a {food4_1}.")
         print(' ')
         
+        
         while True:
             again4 = input('Would you like to do this Madlib again? (y/n): ')
             if again4 == 'n':
@@ -191,15 +188,15 @@ def mad4():
             else:
                 print("Wrong input.")
         
-
 # Madlib Bank
-
 
 
 
 #Start Screen
 def start():
     while True:
+        print(' ')
+        print(' ')
         print('Choose a madlib.')
         print(' ')
         print('1. Help Mom with Cooking')
@@ -212,22 +209,21 @@ def start():
         while True:
             choose = input("(1-4): ")
             if choose == 'end':
-                break
+                exit()
             elif not choose.isdigit():
                 print("     Wrong Input. Please enter a number.")
             elif choose.isdigit():
                 break
         
         if choose == 'end':
-            run = False
-            break
+            exit()
             
         if int(choose) > 4 or int(choose) < 1:
             print("     Please enter a number between 1 and 4.")
             while True:
                 choose = input("(1-4): ")
                 if choose == 'end':
-                    break
+                    exit()
                 if not choose.isdigit():
                     print("     Wrong Input. Please enter a number.")
                 elif int(choose) > 4 or int(choose) < 1:
@@ -244,6 +240,7 @@ def start():
         if choose == '4':
             mad4()
         if choose == 'end':
-            break
+            exit()
+
 
 start()
