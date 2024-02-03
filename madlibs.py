@@ -40,8 +40,6 @@ def mad1():
             else:
                 print("Wrong input.")
 
-
-
 def mad2():
     while True:
         # Input
@@ -145,7 +143,6 @@ def mad3():
             else:
                 print("Wrong input.")
         
-
 def mad4():
     while True:
         animal4 = input("enter an animal: ")
@@ -163,7 +160,7 @@ def mad4():
         verb4_5 = input("enter a verb: ")
         food4_2 = input("enter a food: ")
         game4 = input("enter a game: ")
-        verb4_6 = input("enter a verb")
+        verb4_6 = input("enter a verb: ")
         noun4_5 = input("enther a noun: ")
         noun4_6 = input("enter another noun: ")
         noun4_7 = input("enter another noun (plural): ")
@@ -194,9 +191,6 @@ def mad4():
             else:
                 print("Wrong input.")
         
-def mad5():
-    while True:
-        print('You selected 5')
 
 # Madlib Bank
 
@@ -212,12 +206,11 @@ def start():
         print('2. The Best Beer Choice')
         print('3. Michael Bay Movie')
         print('4. If You Give A..')
-        print('5. ')
         print(' ')
         print("type 'end' to leave.")
 
         while True:
-            choose = input("(1-5): ")
+            choose = input("(1-4): ")
             if choose == 'end':
                 break
             elif not choose.isdigit():
@@ -229,17 +222,17 @@ def start():
             run = False
             break
             
-        if int(choose) > 5 or int(choose) < 1:
-            print("     Please enter a number between 1 and 5.")
+        if int(choose) > 4 or int(choose) < 1:
+            print("     Please enter a number between 1 and 4.")
             while True:
-                choose = input("(1-5): ")
+                choose = input("(1-4): ")
                 if choose == 'end':
                     break
                 if not choose.isdigit():
                     print("     Wrong Input. Please enter a number.")
-                elif int(choose) > 5 or int(choose) < 1:
-                    print("     Please enter a number between 1 and 5.")
-                elif int(choose) >= 1 and int(choose) <= 5:
+                elif int(choose) > 4 or int(choose) < 1:
+                    print("     Please enter a number between 1 and 4.")
+                elif int(choose) >= 1 and int(choose) <= 4:
                     break
 
         if choose == '1':
@@ -250,8 +243,6 @@ def start():
             mad3()
         if choose == '4':
             mad4()
-        if choose == '5':
-            mad5()
         if choose == 'end':
             break
 
