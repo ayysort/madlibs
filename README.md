@@ -1,2 +1,2 @@
 # madlibs
-5 madlibs for you to choose from. [TERMINAL BASED]
+4 madlibs for you to choose from. [TERMINAL BASED]
