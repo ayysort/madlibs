@@ -151,7 +151,7 @@ def mad4():
         noun4_2 = input("enter a noun: ")
         place4_1 = input("enter a location: ")
         noun4_3 = input("enter a noun: ")
-        noun4_4 = input("enter a noun: ")
+        noun4_4 = input("enter another noun: ")
         place4_2 = input("enter a location: ")
         verb4_5 = input("enter a verb: ")
         food4_2 = input("enter a food: ")
